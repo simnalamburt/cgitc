@@ -6,16 +6,32 @@ Close Git Combat
 
 > Kept You Waiting, Huh? ― *[Big Boss]*<br>
 [![i-license]](/LICENSE)
-[![i-fish]][fish]
-[![i-omf]][omf]
 
-**cgitc** is set of useful aliases to use git much more faster.
+**cgitc** is set of useful aliases for [fish] shell. It makes you to use git much more faster.
 
 ```fish
 omf install https://github.com/simnalamburt/pkg-cgitc
 ```
+```
+g    = git
+
+gst  = git status
+gd   = git diff
+gdca = git diff --cached
+gc   = git commit -v
+gup  = git pull --rebase
+glog = git log --oneline --decorate --color --graph
+gsta = git stash
+gstp = git stash pop
+...
+```
 
 cgitc is fork of oh-my-zsh's [git plugin].
+
+*[!!! Help Wanted !!!][issue]*
+--------
+Currently, cgitc is not that comfortable as oh-my-zsh because of technical
+limitation of fish. Please see **[fish-shell#1976][issue]** for the details.
 
 --------
 
@@ -25,11 +41,10 @@ cgitc is fork of oh-my-zsh's [git plugin].
 [fish]:           http://fishshell.com
 [omf]:            https://github.com/oh-my-fish/oh-my-fish
 [git plugin]:     https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh
+[issue]:          https://github.com/fish-shell/fish-shell/issues/1976
 
 [MIT License]:    https://opensource.org/licenses/MIT
 [simnalamburt]:   https://github.com/simnalamburt
 [al]:             https://github.com/simnalamburt/pkg-cgitc/graphs/contributors
 
-[i-license]:      https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square
-[i-fish]:         https://img.shields.io/badge/fish-v2.2.0-007EC7.svg?style=flat-square
-[i-omf]:          https://img.shields.io/badge/Oh%20My%20Fish-Framework-007EC7.svg?style=flat-square
+[i-license]:      https://img.shields.io/badge/license-MIT-007EC7.svg
