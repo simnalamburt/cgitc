@@ -1,6 +1,6 @@
 if not set -q cgitc_initialized
   set -U cgitc_initialized
-  printf 'Intializing \e[33mcgitc\e[0m ... '
+  printf 'Initializing \e[33mcgitc\e[0m ... '
 
   # (sorted alphabetically)
   abbr g 'git'
