@@ -1,4 +1,4 @@
-<img src="https://simnalamburt.github.io/fish-cgitc/logo.svg"
+<img src="https://simnalamburt.github.io/cgitc/logo.svg"
   align="left" width="160px" height="160px"/>
 
 Close Git Combat
@@ -10,9 +10,9 @@ Close Git Combat
 **cgitc** is set of useful aliases for [fish] shell. It makes you to use git much more faster.
 
 ```fish
-omf install https://github.com/simnalamburt/fish-cgitc
+fisher install simnalamburt/cgitc
 # or
-fisher install simnalamburt/fish-cgitc
+omf install https://github.com/simnalamburt/cgitc
 ```
 ```
 g    = git
@@ -30,11 +30,6 @@ gstp = git stash pop
 
 cgitc is fork of oh-my-zsh's [git plugin].
 
-*[!!! Help Wanted !!!][issue]*
---------
-Currently, cgitc is not that comfortable as oh-my-zsh because of technical
-limitation of fish. Please see **[fish-shell#1976][issue]** for the details.
-
 --------
 
 [MIT License] © [simnalamburt] et [al]
@@ -47,6 +42,6 @@ limitation of fish. Please see **[fish-shell#1976][issue]** for the details.
 
 [MIT License]:    https://opensource.org/licenses/MIT
 [simnalamburt]:   https://github.com/simnalamburt
-[al]:             https://github.com/simnalamburt/pkg-cgitc/graphs/contributors
+[al]:             https://github.com/simnalamburt/cgitc/graphs/contributors
 
 [i-license]:      https://img.shields.io/badge/license-MIT-007EC7.svg
