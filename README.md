@@ -1,4 +1,4 @@
-<img src="https://simnalamburt.github.io/pkg-cgitc/logo.svg"
+<img src="https://simnalamburt.github.io/fish-cgitc/logo.svg"
   align="left" width="160px" height="160px"/>
 
 Close Git Combat
@@ -10,7 +10,9 @@ Close Git Combat
 **cgitc** is set of useful aliases for [fish] shell. It makes you to use git much more faster.
 
 ```fish
-omf install https://github.com/simnalamburt/pkg-cgitc
+omf install https://github.com/simnalamburt/fish-cgitc
+# or
+fisher install simnalamburt/fish-cgitc
 ```
 ```
 g    = git
