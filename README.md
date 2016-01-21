@@ -10,9 +10,10 @@ Close Git Combat
 **cgitc** is set of useful aliases for [fish] shell. It makes you to use git much more faster.
 
 ```fish
-fisher install simnalamburt/cgitc
-# or
 omf install https://github.com/simnalamburt/cgitc
+
+# FYI, fisher is not 1.0 yet
+fisher install simnalamburt/cgitc
 ```
 ```
 g    = git
