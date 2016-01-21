@@ -1,4 +1,7 @@
-if not set -q cgitc_initialized
+function init -a path --on-event init_cgitc
+  # Skip if $cgitc_initialized is set
+  if set -q cgitc_initialized; return; end
+
   set -U cgitc_initialized
 
   printf 'Initializing \e[33mcgitc\e[0m ... '
