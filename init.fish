@@ -1,132 +1,22 @@
 if not set -q cgitc_initialized
   set -U cgitc_initialized
+
   printf 'Initializing \e[33mcgitc\e[0m ... '
+  for line in (cat (dirname (status -f))/abbreviations)
+    # 1.  Strip out comments
+    # 2.  Squeeze repeating spaces
+    # 3.  Strip trailing whitespaces
+    set line (echo "$line" | cut -d '#' -f 1 | tr -s ' ' | sed 's/\s*$//')
 
-  # (sorted alphabetically)
-  abbr g 'git'
+    # Skip empty lines
+    if not [ "$line" ]; continue; end
 
-  abbr ga 'git add'
-  abbr gaa 'git add --all'
-  abbr gapa 'git add --patch'
+    # Parse lines
+    set key   (echo "$line" | cut -d ' ' -f 1)
+    set value (echo "$line" | cut -d ' ' -f 2-)
 
-  abbr gb 'git branch'
-  abbr gba 'git branch -a'
-  abbr gbl 'git blame -b -w'
-  abbr gbnm 'git branch --no-merged'
-  abbr gbr 'git branch --remote'
-  abbr gbs 'git bisect'
-  abbr gbsb 'git bisect bad'
-  abbr gbsg 'git bisect good'
-  abbr gbsr 'git bisect reset'
-  abbr gbss 'git bisect start'
-
-  abbr gc 'git commit -v'
-  abbr gc! 'git commit -v --amend'
-  abbr gca 'git commit -v -a'
-  abbr gca! 'git commit -v -a --amend'
-  abbr gcan! 'git commit -v -a -s --no-edit --amend'
-  abbr gcam 'git commit -a -m'
-  abbr gcb 'git checkout -b'
-  abbr gcf 'git config --list'
-  abbr gcl 'git clone --recursive'
-  abbr gclean 'git clean -fd'
-  abbr gcm 'git checkout master'
-  abbr gcmsg 'git commit -m'
-  abbr gco 'git checkout'
-  abbr gcount 'git shortlog -sn'
-  abbr gcp 'git cherry-pick'
-  abbr gcs 'git commit -S'
-
-  abbr gd 'git diff'
-  abbr gdca 'git diff --cached'
-  abbr gdct 'git describe --tags `git rev-list --tags --max-count=1`'
-  abbr gdt 'git diff-tree --no-commit-id --name-only -r'
-  abbr gdw 'git diff --word-diff'
-
-  abbr gf 'git fetch'
-  abbr gfa 'git fetch --all --prune'
-  abbr gfo 'git fetch origin'
-
-  abbr gg 'git gui citool'
-  abbr gga 'git gui citool --amend'
-
-  abbr ggpur 'ggu'
-
-  abbr gignore 'git update-index --assume-unchanged'
-  abbr gignored 'git ls-files -v | grep "^[[:lower:]]"'
-
-  abbr gk '\gitk --all --branches'
-
-  abbr gl 'git pull'
-  abbr glg 'git log --stat --color'
-  abbr glgp 'git log --stat --color -p'
-  abbr glgg 'git log --graph --color'
-  abbr glgga 'git log --graph --decorate --all'
-  abbr glgm 'git log --graph --max-count=10'
-  abbr glo 'git log --oneline --decorate --color'
-  abbr glol "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-  abbr glola "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
-  abbr glog 'git log --oneline --decorate --color --graph'
-  abbr glp "_git_log_prettily"
-
-  abbr gm 'git merge'
-  abbr gmom 'git merge origin/master'
-  abbr gmt 'git mergetool --no-prompt'
-  abbr gmtvim 'git mergetool --no-prompt --tool=vimdiff'
-  abbr gmum 'git merge upstream/master'
-
-  abbr gp 'git push'
-  abbr gpd 'git push --dry-run'
-
-  abbr gpu 'git push upstream'
-  abbr gpv 'git push -v'
-
-  abbr gr 'git remote'
-  abbr gra 'git remote add'
-  abbr grb 'git rebase'
-  abbr grba 'git rebase --abort'
-  abbr grbc 'git rebase --continue'
-  abbr grbi 'git rebase -i'
-  abbr grbm 'git rebase master'
-  abbr grbs 'git rebase --skip'
-  abbr grh 'git reset HEAD'
-  abbr grhh 'git reset HEAD --hard'
-  abbr grmv 'git remote rename'
-  abbr grrm 'git remote remove'
-  abbr grset 'git remote set-url'
-
-  abbr gru 'git reset --'
-  abbr grup 'git remote update'
-  abbr grv 'git remote -v'
-
-  abbr gsb 'git status -sb'
-  abbr gsd 'git svn dcommit'
-  abbr gsi 'git submodule init'
-  abbr gsps 'git show --pretty=short --show-signature'
-  abbr gsr 'git svn rebase'
-  abbr gss 'git status -s'
-  abbr gst 'git status'
-  abbr gsta 'git stash'
-  abbr gstaa 'git stash apply'
-  abbr gstd 'git stash drop'
-  abbr gstl 'git stash list'
-  abbr gstp 'git stash pop'
-  abbr gsts 'git stash show --text'
-  abbr gsu 'git submodule update'
-
-  abbr gts 'git tag -s'
-  abbr gtv 'git tag | sort -V'
-
-  abbr gunignore 'git update-index --no-assume-unchanged'
-
-  abbr gup 'git pull --rebase'
-  abbr gupv 'git pull --rebase -v'
-  abbr glum 'git pull upstream master'
-
-  abbr gvt 'git verify-tag'
-
-  abbr gwch 'git whatchanged -p --abbrev-commit --pretty=medium'
-
+    abbr $key $value
+  end
   echo 'Done'
 end
 
