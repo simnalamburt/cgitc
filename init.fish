@@ -1,5 +1,28 @@
 if not set -q cgitc_initialized
   set -U cgitc_initialized
+  set -U cgitc_abbrs \
+    g \
+    ga gaa gapa \
+    gb gba gbl gbnm gbr gbs gbsb gbsg gbsr gbss \
+    gc gc! gca gca! gcan! gcam gcb gcf gcl gclean gcm gcmsg gco gcount gcp gcs \
+    gd gdca gdct gdt gdw \
+    gf gfa gfo \
+    gg gga \
+    ggpur \
+    gignore gignored \
+    gk \
+    gl glg glgp glgg glgga glgm glo glol glola glog glp \
+    gm gmom gmt gmtvim gmum \
+    gp gpd \
+    gpu gpv \
+    gr gra grb grba grbc grbi grbm grbs grh grhh grmv grrm grset \
+    gru grup grv \
+    gsb gsd gsi gsps gsr gss gst gsta gstaa gstd gstl gstp gsts gsu \
+    gts gtv \
+    gunignore \
+    gup gupv glum \
+    gvt \
+    gwch
   printf 'Initializing \e[33mcgitc\e[0m ... '
 
   # (sorted alphabetically)
