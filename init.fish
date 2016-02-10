@@ -2,8 +2,6 @@ function init -a path --on-event init_cgitc
   # Skip if $cgitc_initialized is set
   if set -q cgitc_initialized; return; end
 
-  set -U cgitc_initialized
-
   printf 'Initializing \e[33mcgitc\e[0m ... '
   for line in (cat (dirname (status -f))/abbreviations)
     # 1.  Strip out comments
@@ -20,6 +18,8 @@ function init -a path --on-event init_cgitc
 
     abbr $key $value
   end
+
+  set -U cgitc_initialized
   echo 'Done'
 end
 
