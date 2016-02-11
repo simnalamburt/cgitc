@@ -86,7 +86,7 @@ grbi          git rebase -i
 grbm          git rebase master
 grbs          git rebase --skip
 grh           git reset HEAD
-grhh          git reset HEAD --hard
+grhh          git reset --hard HEAD
 grmv          git remote rename
 grrm          git remote remove
 grset         git remote set-url
