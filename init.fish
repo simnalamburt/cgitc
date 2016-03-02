@@ -110,6 +110,7 @@ end
 # git pull --rebase origin "${b:=$1}"
 # }
 # compdef _git ggu=git-checkout
+# alias ggpur='ggu'
 # compdef _git ggpur=git-checkout
 
 # alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
