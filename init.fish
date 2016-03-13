@@ -1,9 +1,7 @@
-function init -a path --on-event init_cgitc
-  # Skip if $cgitc_initialized is set
-  if set -q cgitc_initialized; return; end
-
+# Skip if $cgitc_initialized is set
+if not set -q cgitc_initialized
   printf 'Initializing \e[33mcgitc\e[0m ... '
-  for line in (cat (dirname (status -f))/abbreviations)
+  for line in (source (dirname (status -f))/*before.init.fish)
     # 1.  Strip out comments
     # 2.  Squeeze repeating spaces
     # 3.  Strip trailing whitespaces

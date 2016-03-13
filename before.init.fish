@@ -1,4 +1,6 @@
+if status -c
 # Abbreviations sorted in alphabetically
+echo "
 g             git
 
 ga            git add
@@ -122,3 +124,5 @@ glum          git pull upstream master
 gvt           git verify-tag
 
 gwch          git whatchanged -p --abbrev-commit --pretty=medium
+"
+end
