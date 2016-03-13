@@ -1,4 +1,3 @@
-source functions/__cgitc_abbreviations.fish
 for line in (__cgitc_abbreviations)
   # 1.  Strip out comments
   # 2.  Squeeze repeating spaces
