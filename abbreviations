@@ -46,7 +46,7 @@ gfo           git fetch origin
 gg            git gui citool
 gga           git gui citool --amend
 
-ggpur         ggu
+ggpush        git push origin HEAD
 
 gignore       git update-index --assume-unchanged
 gignored      git ls-files -v | grep "^[[:lower:]]"
