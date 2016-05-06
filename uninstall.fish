@@ -12,4 +12,4 @@ for line in (cat (dirname (status -f))/abbreviations)
 
   abbr --erase "$key"
 end
-set --erase -U cgitc_initialized
+set --erase -U cgitc_revision
