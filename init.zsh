@@ -1,15 +1,16 @@
 while read line; do
-  # 1.  Strip out comments
-  # 2.  Squeeze repeating spaces
-  # 3.  Strip trailing whitespaces
-  local line=$(echo "$line" | cut -d '#' -f 1 | tr -s ' ' | sed 's/[[:space:]]*$//')
+  # Strip out comments
+  local arr=("${(@s/#/)line}")
+  line=$arr[1]
 
   # Skip empty lines
   if [ -z "$line" ]; then; continue; fi
 
-  # Parse lines
-  local key=$(echo "$line" | cut -d ' ' -f 1)
-  local value=$(echo "$line" | cut -d ' ' -f 2-)
+  # Split a line into two
+  local key=$line[(w)1]
+  local value=${line#* }
+  value="${value#"${value%%[![:space:]]*}"}" # Remove leading whitespaces
+  value="${value%"${value##*[![:space:]]}"}" # Remove trailing whitespaces
 
   alias $key=$value
 done < ${0:a:h}/abbreviations
