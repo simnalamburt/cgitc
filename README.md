@@ -7,14 +7,18 @@ Close Git Combat
 > Kept You Waiting, Huh? ― *[Big Boss]*<br>
 [![i-license]](/LICENSE)
 
-**cgitc** is set of useful git aliases for [zsh] and [fish].
+**cgitc** is set of useful git aliases for bash, [zsh] and [fish].
 It provides professional and fast git usage.
 
 ```shell
-# For zsh users
+# bash (apppend the second line into your `.bashrc`)
+git clone https://github.com/simnalamburt/cgitc.git --depth=1 ~/.cgitc
+source ~/.cgitc/init.bash
+
+# zsh using https://github.com/zplug/zplug
 zplug "simnalamburt/cgitc"
 
-# For fish users
+# fish
 omf install https://github.com/simnalamburt/cgitc
 ```
 ```
