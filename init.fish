@@ -1,7 +1,7 @@
 # Skip if cgitc_revision is up to date
 set -l current_revision (git -C (dirname (status -f)) rev-parse HEAD)
 if [ "$cgitc_revision" != "$current_revision" ]
-  printf 'Initializing \e[33mcgitc\e[0m ... '
+  printf 'Initializing \x1b[33mcgitc\x1b[0m ... '
   set -l cgitc_text (
     for line in (cat (dirname (status -f))/abbreviations)
       # 1.  Strip out comments
