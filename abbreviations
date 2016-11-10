@@ -7,6 +7,7 @@ gapa          git add --patch
 
 gb            git branch
 gba           git branch -a
+gbd           git branch -d
 gbl           git blame -b -w
 gbnm          git branch --no-merged
 gbr           git branch --remote
