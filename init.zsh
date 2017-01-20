@@ -20,6 +20,6 @@ while read line; do
   value="${value%"${value##*[![:space:]]}"}" # Remove trailing whitespaces
 
   alias $key=$value
-done < ${0:a:h}/abbreviations
+done < "${0%/*}/abbreviations"
 
 unset __CGITC_CMD
