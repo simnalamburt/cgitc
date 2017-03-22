@@ -21,6 +21,7 @@ gc            git commit -v
 gc!           git commit -v --amend
 gca           git commit -v -a
 gca!          git commit -v -a --amend
+gcaa          git commit -v -a --amend
 gcan!         git commit -v -a -s --no-edit --amend
 gcam          git commit -a -m
 gcb           git checkout -b
