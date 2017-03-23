@@ -9,6 +9,7 @@ gb            git branch
 gba           git branch -a
 gbd           git branch -d
 gbl           git blame -b -w
+gbm           git branch -m
 gbnm          git branch --no-merged
 gbr           git branch --remote
 gbs           git bisect
