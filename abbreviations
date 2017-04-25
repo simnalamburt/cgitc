@@ -9,7 +9,6 @@ gb            git branch
 gba           git branch -a
 gbd           git branch -d
 gbl           git blame -b -w
-gbm           git branch -m
 gbnm          git branch --no-merged
 gbr           git branch --remote
 gbs           git bisect
@@ -22,7 +21,6 @@ gc            git commit -v
 gc!           git commit -v --amend
 gca           git commit -v -a
 gca!          git commit -v -a --amend
-gcaa          git commit -v -a --amend
 gcan!         git commit -v -a -s --no-edit --amend
 gcam          git commit -a -m
 gcb           git checkout -b
@@ -48,8 +46,6 @@ gfo           git fetch origin
 
 gg            git gui citool
 gga           git gui citool --amend
-
-ggpush        git push --set-upstream origin HEAD
 
 gignore       git update-index --assume-unchanged
 gignored      git ls-files -v | grep "^[[:lower:]]"
@@ -91,7 +87,6 @@ grbm          git rebase master
 grbs          git rebase --skip
 grh           git reset HEAD
 grhh          git reset --hard HEAD
-grhh1         git reset --hard HEAD~1
 grmv          git remote rename
 grrm          git remote remove
 grset         git remote set-url
@@ -127,3 +122,11 @@ glum          git pull upstream master
 gvt           git verify-tag
 
 gwch          git whatchanged -p --abbrev-commit --pretty=medium
+
+#
+# cgitc extensions
+#
+gbm           git branch -m
+gcaa          git commit -v -a --amend
+ggpush        git push --set-upstream origin HEAD
+grhh1         git reset --hard HEAD~1
