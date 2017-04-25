@@ -50,7 +50,8 @@ omf install https://github.com/simnalamburt/cgitc
 <br>
 
 --------
-[MIT License] © [simnalamburt] et [al]
+*cgitc* is primarily distributed under the terms of the [MIT license]. See
+[COPYRIGHT] for details.
 
 [bash]: https://www.gnu.org/software/bash/
 [zsh]: https://www.zsh.org
@@ -60,6 +61,5 @@ omf install https://github.com/simnalamburt/cgitc
 [oh-my-fish]: https://github.com/oh-my-fish/oh-my-fish
 [oh-my-zsh]: http://ohmyz.sh
 [git plugin]: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh
-[MIT License]: https://opensource.org/licenses/MIT
-[simnalamburt]: https://github.com/simnalamburt
-[al]: https://github.com/simnalamburt/cgitc/graphs/contributors
+[MIT license]: LICENSE
+[COPYRIGHT]: COPYRIGHT

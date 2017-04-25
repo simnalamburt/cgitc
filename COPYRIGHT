@@ -1,0 +1,42 @@
+Short version for non-laywers:
+  The cgitc project is licensed under MIT terms.
+
+Longer version:
+  Copyright 2015-2017 Hyeon Kim
+
+  Licensed under the MIT license <LICENSE-MIT or
+  http://opensource.org/licenses/MIT>. This file
+  may not be copied, modified, or distributed
+  except according to those terms.
+
+
+The cgitc project includes packages written by third parties. The following
+third party packages are included, and carry their own copyright notices and
+license terms:
+
+* The 'abbreviations' file is derived from 'plugins/git/git.plugin.zsh' file of
+  oh-my-zsh <https://github.com/robbyrussell/oh-my-zsh> project.
+  oh-my-zsh project carries the following license.
+
+    The MIT License (MIT)
+
+    Copyright (c) 2009-2017 Robby Russell and contributors
+    See the full list at https://github.com/robbyrussell/oh-my-zsh/contributors
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
