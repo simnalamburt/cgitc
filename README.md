@@ -1,6 +1,8 @@
-Close Git Combat
+Close Git Combat &nbsp; <img alt="logo" src="https://cdn.pixabay.com/photo/2012/04/05/01/48/martial-25778_960_720.png" height=25>
 ========
-**cgitc** is set of useful git aliases for bash, [zsh] and [fish]. It provides professional and swift git usage.
+**cgitc** is set of useful git aliases for [bash], [zsh] and [fish]. It provides
+professional and swift git usage.
+
 ```
 g    = git
 
@@ -16,31 +18,48 @@ gstp = git stash pop
 (etc)
 ```
 
-```shell
-# bash (apppend the second line into your `.bashrc`)
-git clone https://github.com/simnalamburt/cgitc.git --depth=1 ~/.cgitc
-source ~/.cgitc/init.bash
+cgitc is fork of [oh-my-zsh]'s [git plugin].
+<br><br>
 
-# zsh using https://github.com/zplug/zplug
+Installation
+--------
+You can install cgitc via various package managers.
+
+#### Bash
+```bash
+git clone https://github.com/simnalamburt/cgitc.git --depth=1 \
+  ~/.cgitc && echo 'source ~/.cgitc/init.bash' >> ~/.bashrc
+```
+#### Zsh, [zplug]
+```zsh
 zplug "simnalamburt/cgitc"
+```
 
-# fish
+#### Fish, [chips]
+```yaml
+# Update your '~/.config/chips/plugin.yaml'
+github:
+- simnalamburt/cgitc
+```
+
+#### Fish, [oh-my-fish]
+```fish
 omf install https://github.com/simnalamburt/cgitc
 ```
 
-cgitc is fork of oh-my-zsh's [git plugin].
+<br>
 
 --------
-
 [MIT License] © [simnalamburt] et [al]
 
-[Big Boss]:       http://metalgear.wikia.com/wiki/Big_Boss
-[zsh]:            https://github.com/zplug/zplug
-[fish]:           http://fishshell.com
-[omf]:            https://github.com/oh-my-fish/oh-my-fish
-[git plugin]:     https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh
-[issue]:          https://github.com/fish-shell/fish-shell/issues/1976
-
-[MIT License]:    https://opensource.org/licenses/MIT
-[simnalamburt]:   https://github.com/simnalamburt
-[al]:             https://github.com/simnalamburt/cgitc/graphs/contributors
+[bash]: https://www.gnu.org/software/bash/
+[zsh]: https://www.zsh.org
+[fish]: https://fishshell.com
+[zplug]: https://github.com/zplug/zplug
+[chips]: https://github.com/xtendo-org/chips
+[oh-my-fish]: https://github.com/oh-my-fish/oh-my-fish
+[oh-my-zsh]: http://ohmyz.sh
+[git plugin]: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh
+[MIT License]: https://opensource.org/licenses/MIT
+[simnalamburt]: https://github.com/simnalamburt
+[al]: https://github.com/simnalamburt/cgitc/graphs/contributors
