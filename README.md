@@ -1,26 +1,6 @@
-<img src="https://simnalamburt.github.io/cgitc/logo.svg"
-  align="left" width="160px" height="160px"/>
-
 Close Git Combat
 ========
-
-> Kept You Waiting, Huh? ― *[Big Boss]*<br>
-[![i-license]](/LICENSE)
-
-**cgitc** is set of useful git aliases for bash, [zsh] and [fish].
-It provides professional and fast git usage.
-
-```shell
-# bash (apppend the second line into your `.bashrc`)
-git clone https://github.com/simnalamburt/cgitc.git --depth=1 ~/.cgitc
-source ~/.cgitc/init.bash
-
-# zsh using https://github.com/zplug/zplug
-zplug "simnalamburt/cgitc"
-
-# fish
-omf install https://github.com/simnalamburt/cgitc
-```
+**cgitc** is set of useful git aliases for bash, [zsh] and [fish]. It provides professional and swift git usage.
 ```
 g    = git
 
@@ -32,7 +12,20 @@ gup  = git pull --rebase
 glog = git log --oneline --decorate --color --graph
 gsta = git stash
 gstp = git stash pop
-...
+
+(etc)
+```
+
+```shell
+# bash (apppend the second line into your `.bashrc`)
+git clone https://github.com/simnalamburt/cgitc.git --depth=1 ~/.cgitc
+source ~/.cgitc/init.bash
+
+# zsh using https://github.com/zplug/zplug
+zplug "simnalamburt/cgitc"
+
+# fish
+omf install https://github.com/simnalamburt/cgitc
 ```
 
 cgitc is fork of oh-my-zsh's [git plugin].
@@ -51,5 +44,3 @@ cgitc is fork of oh-my-zsh's [git plugin].
 [MIT License]:    https://opensource.org/licenses/MIT
 [simnalamburt]:   https://github.com/simnalamburt
 [al]:             https://github.com/simnalamburt/cgitc/graphs/contributors
-
-[i-license]:      https://img.shields.io/badge/license-MIT-007EC7.svg
