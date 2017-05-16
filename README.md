@@ -1,5 +1,7 @@
-Close Git Combat &nbsp; <img alt="logo" src="https://cdn.pixabay.com/photo/2012/04/05/01/48/martial-25778_960_720.png" height=25>
-========
+<h1 align=center>
+  <img alt="Close Git Combat" src="https://simnalamburt.github.io/cgitc/emblem.svg">
+</h1>
+
 **cgitc** is set of useful git aliases for [bash], [zsh] and [fish]. It provides
 professional and swift git usage.
 
