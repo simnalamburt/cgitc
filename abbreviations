@@ -32,7 +32,7 @@ gcb                  git checkout -b
 gcf                  git config --list
 gcl                  git clone --recursive
 gclean               git clean -fd
-gpristine            git reset --hard && git clean -dfx
+#gpristine            git reset --hard && git clean -dfx
 gcm                  git checkout master
 gcd                  git checkout develop
 gcmsg                git commit -m
@@ -69,7 +69,7 @@ ghh                  git help
 
 gignore              git update-index --assume-unchanged
 gignored             git ls-files -v | grep "^[[:lower:]]"
-git-svn-dcommit-push git svn dcommit && git push github master:svntrunk
+#git-svn-dcommit-push git svn dcommit && git push github master:svntrunk
 
 gk                   \gitk --all --branches
 gke                  \gitk --all (git log -g --pretty=%h)
@@ -94,7 +94,7 @@ gmum                 git merge upstream/master
 
 gp                   git push
 gpd                  git push --dry-run
-gpoat                git push origin --all && git push origin --tags
+#gpoat                git push origin --all && git push origin --tags
 gpu                  git push upstream
 gpv                  git push -v
 
@@ -136,7 +136,7 @@ gts                  git tag -s
 gtv                  git tag | sort -V
 
 gunignore            git update-index --no-assume-unchanged
-gunwip               git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1
+#gunwip               git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1
 gup                  git pull --rebase
 gupv                 git pull --rebase -v
 glum                 git pull upstream master
