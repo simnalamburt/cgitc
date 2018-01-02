@@ -53,9 +53,8 @@ omf install https://github.com/simnalamburt/cgitc
 
 --------
 *cgitc* is primarily distributed under the terms of both the [MIT license]
-and the [Apache License (Version 2.0)]. See [COPYRIGHT] for details.
-
-cgitc emblem (C) [XT] 2017
+and the [Apache License (Version 2.0)]. *cgitc emblem* © 2017 [XT]. See
+[COPYRIGHT] for details.
 
 [bash]: https://www.gnu.org/software/bash/
 [zsh]: https://www.zsh.org
