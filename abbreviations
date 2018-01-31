@@ -5,6 +5,7 @@ ga                   git add
 gaa                  git add --all
 gapa                 git add --patch
 gau                  git add --update
+gap                  git apply
 
 gb                   git branch
 gba                  git branch -a
@@ -45,6 +46,7 @@ gcs                  git commit -S
 
 gd                   git diff
 gdca                 git diff --cached
+gdcw                 git diff --cached --word-diff
 gdct                 git describe --tags `git rev-list --tags --max-count=1`
 gdt                  git diff-tree --no-commit-id --name-only -r
 gdw                  git diff --word-diff
@@ -91,6 +93,7 @@ gmom                 git merge origin/master
 gmt                  git mergetool --no-prompt
 gmtvim               git mergetool --no-prompt --tool=vimdiff
 gmum                 git merge upstream/master
+gma                  git merge --abort
 
 gp                   git push
 gpd                  git push --dry-run
