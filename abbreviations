@@ -152,5 +152,6 @@ gwch                 git whatchanged -p --abbrev-commit --pretty=medium
 #
 gbm                  git branch -m
 gcaa                 git commit -v -a --amend
+gdl                  git difftool
 ggpush               git push --set-upstream origin HEAD
 grhh1                git reset --hard HEAD~1
