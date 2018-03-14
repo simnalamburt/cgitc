@@ -42,4 +42,4 @@ if [ "$cgitc_revision" != "$current_revision" ]
   set -U cgitc_revision "$current_revision"
   echo 'Done'
 end
-. (realpath (dirname (status -f)))/run.fish
+source (realpath (dirname (status -f)))/run.fish
