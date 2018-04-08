@@ -3,7 +3,7 @@ __cgitc() {
   local key
   local value
 
-  while read line; do
+  while read -r line; do
     # Strip out comments
     IFS='#' read -ra arr <<< "$line"
     line=${arr[0]}
@@ -19,7 +19,8 @@ __cgitc() {
     value="${value#"${value%%[![:space:]]*}"}" # Remove leading whitespaces
     value="${value%"${value##*[![:space:]]}"}" # Remove trailing whitespaces
 
-    alias $key="$value"
+    # shellcheck disable=SC2139
+    alias "$key"="$value"
   done < "$(dirname "${BASH_SOURCE[0]}")/abbreviations"
 }
 

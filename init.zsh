@@ -6,20 +6,21 @@ else
   __CGITC_CMD="line=\$(echo \"\$line\" | cut -d '#' -f 1)"
 fi
 
-while read line; do
+while read -r line; do
   # Strip out comments
-  eval $__CGITC_CMD
+  eval "$__CGITC_CMD"
 
   # Skip empty lines
-  if [ -z "$line" ]; then; continue; fi
+  if [ -z "$line" ]; then continue; fi
 
   # Split a line into two
-  local key=$line[(w)1]
-  local value=${line#* }
+  key="$line[(w)1]"
+  value=${line#* }
   value="${value#"${value%%[![:space:]]*}"}" # Remove leading whitespaces
   value="${value%"${value##*[![:space:]]}"}" # Remove trailing whitespaces
 
-  alias $key=$value
+  # shellcheck disable=SC2139
+  alias "$key"="$value"
 done < "${0%/*}/abbreviations"
 
 unset __CGITC_CMD
