@@ -29,8 +29,8 @@ You can install cgitc via various package managers.
 
 #### Bash
 ```bash
-git clone https://github.com/simnalamburt/cgitc.git --depth=1 \
-  ~/.cgitc && echo 'source ~/.cgitc/init.bash' >> ~/.bashrc
+git clone https://github.com/simnalamburt/cgitc.git --depth=1 ~/.cgitc &&\
+  echo 'source ~/.cgitc/init.bash' >> ~/.bashrc
 ```
 #### Zsh, [zplug]
 ```zsh
