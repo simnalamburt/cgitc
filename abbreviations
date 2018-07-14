@@ -100,6 +100,7 @@ gpd                  git push --dry-run
 #gpoat                git push origin --all && git push origin --tags
 gpu                  git push upstream
 gpv                  git push -v
+gp!                  git push --force
 
 gr                   git remote
 gra                  git remote add
