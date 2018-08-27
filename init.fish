@@ -1,6 +1,6 @@
 # Support fish < 2.2
 switch "$FISH_VERSION"; case 2.1.2 2.1.1 2.1.0 2.0.0
-  for line in (cat (dirname (status -f))/abbreviations)
+  for line in (cat (dirname (status -f))/abbreviations.fish)
     # 1.  Strip out comments
     # 2.  Squeeze repeating spaces
     # 3.  Strip trailing whitespaces
@@ -23,7 +23,7 @@ set -l current_revision (git -C (dirname (realpath (status -f))) rev-parse HEAD)
 if [ "$cgitc_revision" != "$current_revision" ]
   printf 'Initializing \x1b[33mcgitc\x1b[0m ... '
   set -l cgitc_text (
-    for line in (cat (dirname (realpath (status -f)))/abbreviations)
+    for line in (cat (dirname (realpath (status -f)))/abbreviations.fish)
       # 1.  Strip out comments
       # 2.  Squeeze repeating spaces
       # 3.  Strip trailing whitespaces

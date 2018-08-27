@@ -21,6 +21,6 @@ while read -r line; do
 
   # shellcheck disable=SC2139
   alias "$key"="$value"
-done < "${0%/*}/abbreviations"
+done < "${0%/*}/abbreviations.posix"
 
 unset __CGITC_CMD
