@@ -32,12 +32,14 @@ if [ "$cgitc_revision" != "$current_revision" ]
       # Skip empty lines
       if not [ "$line" ]; continue; end
 
-      # Wrap with double quote
-      echo "\"$line\""
-    end | tr '\n' ' '
-  )
+      # Tokenize
+      set line (string split ' ' $line)
 
-  echo "set -gx fish_user_abbreviations \$fish_user_abbreviations $cgitc_text" > (realpath (dirname (status -f)))/run.fish
+      # Wrap with calling 'abbr'
+      echo "abbr --add --global -- $line[1] \"$line[2..-1]\""
+    end 
+  )
+  echo -s \n$cgitc_text > (realpath (dirname (status -f)))/run.fish
 
   set -U cgitc_revision "$current_revision"
   echo 'Done'
