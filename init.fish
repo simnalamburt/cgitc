@@ -1,5 +1,5 @@
 # Support fish < 2.2
-if printf '2.2.0\n%s' "$FISH_VERSION" | sort --check=silent --version-sort
+if printf '%s\n2.2.0' "$FISH_VERSION" | sort --check=silent --version-sort
   for line in (cat (dirname (status -f))/abbreviations)
     # 1.  Strip out comments
     # 2.  Squeeze repeating spaces
@@ -23,9 +23,7 @@ set -l current_revision (git -C (dirname (realpath (status -f))) rev-parse HEAD)
 if [ "$cgitc_revision" != "$current_revision" ]
   printf 'Initializing \x1b[33mcgitc\x1b[0m ... '
 
-  set -l cgitc_text
-
-  if printf '3.0.0\n%s' "$FISH_VERSION" | sort --check=silent --version-sort
+  if printf '%s\n3.0.0' "$FISH_VERSION" | sort --check=silent --version-sort
     # For 2.2.0 < fish < 3.0.0 use fish_user_abbreviations env. var
     set -l cgitc_text (
       for line in (cat (dirname (realpath (status -f)))/abbreviations)
@@ -44,7 +42,7 @@ if [ "$cgitc_revision" != "$current_revision" ]
     echo "set -gx fish_user_abbreviations \$fish_user_abbreviations $cgitc_text" > (realpath (dirname (status -f)))/run.fish
   else
     # For fish > 3.0.0 use abbr command
-    set cgitc_text (
+    set -l cgitc_text (
       for line in (cat (dirname (realpath (status -f)))/abbreviations)
         # 1.  Strip out comments
         # 2.  Squeeze repeating spaces
@@ -63,6 +61,7 @@ if [ "$cgitc_revision" != "$current_revision" ]
     )
     echo -s \n$cgitc_text > (realpath (dirname (status -f)))/run.fish
   end
+
   set -U cgitc_revision "$current_revision"
   echo 'Done'
 end
