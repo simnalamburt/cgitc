@@ -1,5 +1,5 @@
 # Support fish < 2.2
-switch "$FISH_VERSION"; case 2.1.2 2.1.1 2.1.0 2.0.0
+if printf '%s\n2.2.0' "$FISH_VERSION" | sort --check=silent --version-sort
   for line in (cat (dirname (status -f))/abbreviations)
     # 1.  Strip out comments
     # 2.  Squeeze repeating spaces
@@ -22,22 +22,45 @@ end
 set -l current_revision (git -C (dirname (realpath (status -f))) rev-parse HEAD)
 if [ "$cgitc_revision" != "$current_revision" ]
   printf 'Initializing \x1b[33mcgitc\x1b[0m ... '
-  set -l cgitc_text (
-    for line in (cat (dirname (realpath (status -f)))/abbreviations)
-      # 1.  Strip out comments
-      # 2.  Squeeze repeating spaces
-      # 3.  Strip trailing whitespaces
-      set line (echo "$line" | cut -d '#' -f 1 | tr -s ' ' | sed 's/[[:space:]]*$//')
 
-      # Skip empty lines
-      if not [ "$line" ]; continue; end
+  if printf '%s\n3.0.0' "$FISH_VERSION" | sort --check=silent --version-sort
+    # For 2.2.0 < fish < 3.0.0 use fish_user_abbreviations env. var
+    set -l cgitc_text (
+      for line in (cat (dirname (realpath (status -f)))/abbreviations)
+        # 1.  Strip out comments
+        # 2.  Squeeze repeating spaces
+        # 3.  Strip trailing whitespaces
+        set line (echo "$line" | cut -d '#' -f 1 | tr -s ' ' | sed 's/[[:space:]]*$//')
 
-      # Wrap with double quote
-      echo "\"$line\""
-    end | tr '\n' ' '
-  )
+        # Skip empty lines
+        if not [ "$line" ]; continue; end
 
-  echo "set -gx fish_user_abbreviations \$fish_user_abbreviations $cgitc_text" > (realpath (dirname (status -f)))/run.fish
+        # Wrap with double quote
+        echo "\"$line\""
+      end | tr '\n' ' '
+    )
+    echo "set -gx fish_user_abbreviations \$fish_user_abbreviations $cgitc_text" > (realpath (dirname (status -f)))/run.fish
+  else
+    # For fish > 3.0.0 use abbr command
+    set -l cgitc_text (
+      for line in (cat (dirname (realpath (status -f)))/abbreviations)
+        # 1.  Strip out comments
+        # 2.  Squeeze repeating spaces
+        # 3.  Strip trailing whitespaces
+        set line (echo "$line" | cut -d '#' -f 1 | tr -s ' ' | sed 's/[[:space:]]*$//')
+
+        # Skip empty lines
+        if not [ "$line" ]; continue; end
+
+        # Tokenize
+        set line (string split ' ' $line)
+
+        # Wrap with calling 'abbr'
+        echo "abbr --add --global -- $line[1] \"$line[2..-1]\""
+      end
+    )
+    echo -s \n$cgitc_text > (realpath (dirname (status -f)))/run.fish
+  end
 
   set -U cgitc_revision "$current_revision"
   echo 'Done'
