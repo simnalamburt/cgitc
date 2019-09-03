@@ -62,8 +62,6 @@ ggpur                ggu
 
 ggpull               git pull origin (git_current_branch)
 
-ggpush               git push origin (git_current_branch)
-
 ggsup                git branch --set-upstream-to=origin/(git_current_branch)
 gpsup                git push --set-upstream origin (git_current_branch)
 
