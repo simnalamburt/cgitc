@@ -111,7 +111,9 @@ grh                  git reset HEAD
 grhh                 git reset --hard HEAD
 grmv                 git remote rename
 grrm                 git remote remove
+grs                  git restore
 grset                git remote set-url
+grss                 git restore --source
 #grt                  cd (git rev-parse --show-toplevel || echo ".")
 gru                  git reset --
 grup                 git remote update
@@ -132,6 +134,8 @@ gstl                 git stash list
 gstp                 git stash pop
 gsts                 git stash show --text
 gsu                  git submodule update
+gsw                  git switch
+gswc                 git switch -c
 
 gts                  git tag -s
 gtv                  git tag | sort -V
