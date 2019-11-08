@@ -154,7 +154,7 @@ gsr                  git svn rebase
 gss                  git status -s
 gst                  git status
 
-gsta                 git stash save
+#gsta                 git stash save
 
 gstaa                git stash apply
 gstc                 git stash clear
@@ -194,3 +194,4 @@ gds                  git diff --stat
 ggpush               git push --set-upstream origin HEAD
 gp!                  git push --force-with-lease
 grhh1                git reset --hard HEAD~1
+gsta                 git stash
