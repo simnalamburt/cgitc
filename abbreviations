@@ -50,7 +50,7 @@ gd                   git diff
 gdca                 git diff --cached
 gdcw                 git diff --cached --word-diff
 #gdct                 git describe --tags $(git rev-list --tags --max-count=1)
-#gds                  git diff --staged
+#gds                  git diff --staged # NOTE: It conflicts with "git diff --stat"
 gdt                  git diff-tree --no-commit-id --name-only -r
 gdw                  git diff --word-diff
 
