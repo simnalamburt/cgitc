@@ -47,7 +47,7 @@ gcs                  git commit -S
 gd                   git diff
 gdca                 git diff --cached
 gdcw                 git diff --cached --word-diff
-gdct                 git describe --tags `git rev-list --tags --max-count=1`
+#gdct                 git describe --tags $(git rev-list --tags --max-count=1)
 gdt                  git diff-tree --no-commit-id --name-only -r
 gdw                  git diff --word-diff
 
@@ -58,12 +58,11 @@ gfo                  git fetch origin
 gg                   git gui citool
 gga                  git gui citool --amend
 
-ggpur                ggu
+#ggpur                ggu
+#ggpull               git pull origin "$(git_current_branch)"
 
-ggpull               git pull origin (git_current_branch)
-
-ggsup                git branch --set-upstream-to=origin/(git_current_branch)
-gpsup                git push --set-upstream origin (git_current_branch)
+#ggsup                git branch --set-upstream-to=origin/$(git_current_branch)
+#gpsup                git push --set-upstream origin $(git_current_branch)
 
 ghh                  git help
 
@@ -72,7 +71,7 @@ gignored             git ls-files -v | grep "^[[:lower:]]"
 #git-svn-dcommit-push git svn dcommit && git push github master:svntrunk
 
 gk                   \gitk --all --branches
-gke                  \gitk --all (git log -g --pretty=%h)
+#gke                  \gitk --all $(git log -g --pretty=%h)
 
 gl                   git pull
 glg                  git log --stat
