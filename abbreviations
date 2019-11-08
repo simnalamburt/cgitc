@@ -156,5 +156,5 @@ gcaa                 git commit -v -a --amend
 gdl                  git difftool
 gds                  git diff --stat
 ggpush               git push --set-upstream origin HEAD
-grhh1                git reset --hard HEAD~1
 gp!                  git push --force-with-lease
+grhh1                git reset --hard HEAD~1
