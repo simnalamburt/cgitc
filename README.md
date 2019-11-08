@@ -29,12 +29,18 @@ You can install cgitc via various package managers.
 
 #### Bash
 ```bash
-git clone https://github.com/simnalamburt/cgitc.git --depth=1 ~/.cgitc &&\
-  echo 'source ~/.cgitc/init.bash' >> ~/.bashrc
+git clone https://github.com/simnalamburt/cgitc.git --depth=1 ~/.cgitc
+cat <<< 'source ~/.cgitc/init.bash' >> ~/.bashrc
 ```
+
+#### Zsh, [zplugin]
+```zsh
+zplugin light simnalamburt/cgitc
+```
+
 #### Zsh, [zplug]
 ```zsh
-zplug "simnalamburt/cgitc"
+zplug 'simnalamburt/cgitc'
 ```
 
 #### Fish, [chips]
@@ -59,6 +65,7 @@ and the [Apache License (Version 2.0)]. *cgitc emblem* © 2017 [XT]. See
 [bash]: https://www.gnu.org/software/bash/
 [zsh]: https://www.zsh.org
 [fish]: https://fishshell.com
+[zplugin]: https://github.com/zdharma/zplugin
 [zplug]: https://github.com/zplug/zplug
 [chips]: https://github.com/xtendo-org/chips
 [oh-my-fish]: https://github.com/oh-my-fish/oh-my-fish
