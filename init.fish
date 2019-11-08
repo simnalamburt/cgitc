@@ -1,4 +1,4 @@
-# Support fish < 2.2
+# Fish <2.2.0
 if printf '%s\n2.2.0' "$FISH_VERSION" | sort --check=silent --version-sort
   for line in (cat (dirname (status -f))/abbreviations)
     # 1.  Strip out comments
@@ -24,7 +24,8 @@ if [ "$cgitc_revision" != "$current_revision" ]
   printf 'Initializing \x1b[33mcgitc\x1b[0m ... '
 
   if printf '%s\n3.0.0' "$FISH_VERSION" | sort --check=silent --version-sort
-    # For 2.2.0 < fish < 3.0.0 use fish_user_abbreviations env. var
+    # Fish >=2.2.0, <3.0.0
+    # Use fish_user_abbreviations environment variable
     set -l cgitc_text (
       for line in (cat (dirname (realpath (status -f)))/abbreviations)
         # 1.  Strip out comments
@@ -41,7 +42,8 @@ if [ "$cgitc_revision" != "$current_revision" ]
     )
     echo "set -gx fish_user_abbreviations \$fish_user_abbreviations $cgitc_text" > (realpath (dirname (status -f)))/run.fish
   else
-    # For fish > 3.0.0 use abbr command
+    # Fish >=3.0.0
+    # Use abbr command
     set -l cgitc_text (
       for line in (cat (dirname (realpath (status -f)))/abbreviations)
         # 1.  Strip out comments
