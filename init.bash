@@ -21,8 +21,10 @@ __cgitc() {
 
     # shellcheck disable=SC2139
     alias "$key"="$value"
-  done < "$(dirname "${BASH_SOURCE[0]}")/abbreviations"
+  done < "${1}"
 }
 
-__cgitc
+__cgitc "$(dirname "${BASH_SOURCE[0]}")/abbreviations"
+__cgitc "$(dirname "${BASH_SOURCE[0]}")/abbreviations.bash"
+
 unset -f __cgitc
