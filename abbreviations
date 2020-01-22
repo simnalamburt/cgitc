@@ -193,7 +193,8 @@ gdl                  git difftool
 gds                  git diff --stat
 ggpush               git push --set-upstream origin HEAD
 gp!                  git push --force-with-lease
-# grhd is useful if you use it with https://github.com/simnalamburt/zsh-expand-all
+# grhd and grhhd is useful if you use it with https://github.com/simnalamburt/zsh-expand-all
 grhd                 git reset HEAD
+grhhd                git reset --hard HEAD
 grhh1                git reset --hard HEAD~1
 gsta                 git stash
