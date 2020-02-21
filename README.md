@@ -25,7 +25,7 @@ cgitc is fork of [oh-my-zsh]'s [git plugin].
 
 Installation
 --------
-You can install cgitc via various package managers.
+You can install cgitc via various plugin managers.
 
 #### Bash
 ```bash
