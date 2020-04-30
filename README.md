@@ -36,6 +36,9 @@ cat <<< 'source ~/.cgitc/init.bash' >> ~/.bashrc
 #### Zsh, [zinit]
 ```zsh
 zinit light simnalamburt/cgitc
+
+# (Optional) It'll be more useful with zsh-expand-all
+zinit light simnalamburt/zsh-expand-all
 ```
 
 #### Fish, [chips]
