@@ -198,4 +198,4 @@ grhd                 git reset HEAD
 grhhd                git reset --hard HEAD
 grhh1                git reset --hard HEAD~1
 gsta                 git stash
-g-                   git checkout -
+gc-                   git checkout -
