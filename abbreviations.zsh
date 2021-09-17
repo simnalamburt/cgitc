@@ -1,4 +1,4 @@
-gbda                 git branch --no-color --merged | command grep -vE "^(\+|\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d
+gbda                 git branch --no-color --merged | command grep -vE "^(\+|\*|\s*(master|main|develop|dev)\s*$)" | command xargs -n 1 git branch -d
 gpristine            git reset --hard && git clean -dfx
 gdct                 git describe --tags $(git rev-list --tags --max-count=1)
 git-svn-dcommit-push git svn dcommit && git push github master:svntrunk
