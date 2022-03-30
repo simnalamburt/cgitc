@@ -199,3 +199,4 @@ grhh1                git reset --hard HEAD~1
 gsta                 git stash
 gc-                  git checkout -
 glogp                git log --decorate --oneline --graph --show-pulls --
+gsur                 git submodule update --recursive
