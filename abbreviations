@@ -197,6 +197,8 @@ grhd                 git reset HEAD
 grhhd                git reset --hard HEAD
 grhh1                git reset --hard HEAD~1
 gsta                 git stash
+gstas                git stash --staged
+gstai                git stash --keep-index
 gc-                  git checkout -
 glogp                git log --decorate --oneline --graph --show-pulls --
 gsur                 git submodule update --recursive
