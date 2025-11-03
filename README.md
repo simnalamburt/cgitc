@@ -1,5 +1,5 @@
 <h1 align=center>
-  <img alt="Close Git Combat" src="https://simnalamburt.github.io/cgitc/emblem.svg">
+  <img alt="Close Git Combat" src=https://i.hyeon.me/cgitc/emblem.svg>
 </h1>
 
 **cgitc** is set of useful git aliases for [bash], [zsh] and [fish]. It provides
